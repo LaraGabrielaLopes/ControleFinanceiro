@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 80px;
+    background-color: #E0E0E0;
+}
+
+.cabecalho-imagem {
+    height: 36px;
+}
+
+.cabecalho-titulo {
+    color: #333333;
+    font-size: 20px;
+    font-weight: 600;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.cabecalho-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 60%;
+    gap: 20px;
+    height: 40px;
+}
+
+.cabecalho-menu-links {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 600;
+    font-size: 16px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <img class="cabecalho-imagem" src="Ellipse 13.png" alt="Logo">
+        <h1 class="cabecalho-titulo">Controle Financeiro</h1>
+        <nav class="cabecalho-menu">
+            <a class="cabecalho-menu-links" href="cadastro.html">Cadastrar Transação</a> |
+            <a class="cabecalho-menu-links" href="limpar-dados.html">Limpar dados</a>
+        </nav>
+    </header>
+
+    <main class="main">        
+            <form class="formulario">
+                <h2 class="formulario-titulo" >Nova Transação</h2>
+                <div class="formulario-campos">
+                    <div class="formulario-campos-label">Tipo de Transação</div>
+                    <div class="formulario-campos-label">Nome da Mercadoria</div>
+                    <div class="formulario-campos-label">Valor</div>
+                </div>
+                <button class="formulario-botao">Adicionar Transação</button>
+            </form>
+        
+
+        <section class="area-tabela">
+            <h2 class="area-tabela-titulo">Extrato de Transações</h2>
+            <table class="tabela">
+                <thead class="tabela-cabecalho">
+                    <tr>
+                        <th></th>
+                        <th>Mercadoria</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+
+                <tbody class="tabela-corpo">
+                    <tr>
+                        <td></td>
+                        <td>Lorem ipsum dolor sit amet consectetur</td>
+                        <td>R$ 12.999,99</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Quis nostrud exercitation</td>
+                        <td>R$ 99,99</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Lorem ipsum</td>
+                        <td>R$ 9,99</td>
+                    </tr>
+                </tbody>
+
+                <tfoot class="tabela-rodape">
+                    <tr>
+                        <td></td>
+                        <td>Total</td>
+                        <td>R$ 12.909,99</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+    
+</body>
+</html>
