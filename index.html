@@ -20,11 +20,24 @@
 
     <main class="main">        
             <form class="formulario">
-                <h2 class="formulario-titulo" >Nova Transação</h2>
+                <h2 class="formulario-titulo" >Nova transação</h2>
                 <div class="formulario-campos">
-                    <div class="formulario-campos-label">Tipo de Transação</div>
-                    <div class="formulario-campos-label">Nome da Mercadoria</div>
-                    <div class="formulario-campos-label">Valor</div>
+                    <div>
+                        <label  class="formulario-campos-label">Tipo de Transação</label><br>
+                        <select class="formulario-campos-input">
+                            <option></option>
+                            <option>Compra</option>
+                            <option>Venda</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label  class="formulario-campos-label">Nome da Mercadoria</label><br>
+                        <input class="formulario-campos-input" type="text" placeholder="input">
+                    </div>
+                    <div>
+                        <label  class="formulario-campos-label">Valor</label><br>
+                        <input class="formulario-campos-input" type="text" placeholder="R$ 0,00">
+                    </div>
                 </div>
                 <button class="formulario-botao">Adicionar Transação</button>
             </form>
