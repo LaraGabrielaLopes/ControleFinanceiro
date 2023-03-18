@@ -80,7 +80,7 @@
     margin-bottom: 15px;
 }
 
-.formulario-campos{
+.formulario-campos {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -94,14 +94,14 @@
     font-size: 14px;
 }
 
-.formulario-campos-input, .formulario-botao {
+.formulario-campos-input, .botao, .input-mercadoria {
     width: 100%;
     height: 30px;
     border: 1px solid #979797;
     border-radius: 4px;
 }
 
-.formulario-botao {
+.botao {
     background-color: #333333;
     color: #FFFFFF;
     font-size: 14px;
@@ -151,7 +151,60 @@
         padding-right: 20px;
     }
 
+    .formulario {
+        width: 97%;
+    }
 
+    .formulario-campos {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+    }
 
-   
+    .formulario-campos-input {
+        width: 100%;
+    }
+
+    .input-mercadoria {
+        width: 350px;
+    }
+
+    .formulario-botao {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .botao {
+        width: 30%;
+    }   
+}
+
+@media screen and (max-width: 675px) {
+
+    .formulario {
+        border: none;
+        padding: 0;
+    }
+
+    .formulario-titulo {
+        display: none;
+    }
+
+    .formulario-campos {
+        flex-direction: column;
+        gap: 15px;       
+    }
+
+    .input-mercadoria {
+        width: 100%;
+    }
+
+    .formulario-botao {
+        display: flex;
+        justify-content: center;
+    }
+
+    .botao {
+        width: 100%;
+    } 
 }
