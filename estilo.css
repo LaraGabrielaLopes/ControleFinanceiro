@@ -30,6 +30,15 @@
     margin-left: 20px;
 }
 
+.menu{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 22px;
+}
+
 .cabecalho-menu {
     display: flex;
     flex-direction: row;
@@ -50,6 +59,10 @@
     color: #333333;
     font-weight: 600;
     font-size: 16px;
+}
+
+.cabecalho-menu-links-fechar {
+    display: none;
 }
 
 .main {
@@ -136,6 +149,10 @@
     width: 95%;
 }
 
+.tabela-cabecalho {
+    font-weight: bold;
+}
+
 .tabela th {
     text-align: left;
     font-size: 14px;
@@ -182,20 +199,65 @@
         padding-right: 20px;
     }
 
-    .cabecalho-menu {
-        background-color: #E0E0E0;
-        width: 10%;
-    }
-
     .cabecalho-menu-imagem {
         display: flex;
         width: 18px;
         height: 12px;
     }
 
-    .cabecalho-menu-links {
+    .cabecalho-menu {
         display: none;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: #333;
+        height: 100%;
+        width: 85%;
+        z-index: 2;
     }
+
+    .menu:hover .cabecalho-menu {
+        display: flex;
+    }
+/*
+    .cabecalho-menu-imagem:hover {
+        display: flex;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: #333;
+        height: 100%;
+        width: 85%;
+        z-index: 2;
+    }*/
+
+    .cabecalho-menu a {
+        padding: 0 20px;
+        height: 32px;
+        width: calc(100% - 40px);
+        display: flex;
+        justify-content: flex-end;
+        font-size: 16px;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .cabecalho-menu a:hover {
+        background-color: #c4c4c4;
+        color: #333;
+    } 
+    
+    .cabecalho-menu a.cabecalho-menu-links-fechar {
+        width: calc(100% - 40px);
+        padding-top: 20px;
+        text-align: left;
+        justify-content: flex-start;
+    }
+
 
     .linha-links {
         display: none;

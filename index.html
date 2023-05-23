@@ -11,50 +11,70 @@
     <header class="cabecalho">
         <img class="cabecalho-imagem" src="Ellipse 13.png" alt="Logo">
         <h1 class="cabecalho-titulo">Controle Financeiro</h1>
-        <nav class="cabecalho-menu">
-            <img class="cabecalho-menu-imagem" src="Shape.png" alt="menu do cabeçalho">
-            <a class="cabecalho-menu-links" href="cadastro.html">Cadastrar Transação</a><span class="linha-links">|</span>
-            <a class="cabecalho-menu-links" href="limpar-dados.html">Limpar dados</a>
-        </nav>
+        <div class="menu"> 
+            <img class="cabecalho-menu-imagem" src="Shape.png" alt="menu do cabeçalho">   
+            <nav class="cabecalho-menu">
+                <a class="cabecalho-menu-links-fechar" class="cabecalho-menu-links" href="javascript:void(0)">X</a>
+                <a class="cabecalho-menu-links" href="index.html">Cadastrar Transação</a><span class="linha-links">|</span>
+                <a class="cabecalho-menu-links" href="#" onclick="limparDados(merc)">Limpar dados</a>
+            </nav>
+        </div>
     </header>
 
     <main class="main">        
-        <form class="formulario">
+        <form class="formulario" onsubmit="testaFormulario(event);">
             <h2 class="formulario-titulo" >Nova transação</h2>
             <div class="formulario-campos">
                 <div>
-                    <label  class="formulario-campos-label">Tipo de transação</label><br>
-                    <select class="formulario-campos-input">
-                        <option></option>
-                        <option>Compra</option>
-                        <option>Venda</option>
+                    <label for="campos-input" class="formulario-campos-label">Tipo de transação</label><br>
+                    <select class="formulario-campos-input" id="campos-input">
+                        <option value="-">Compra</option>
+                        <option value="+">Venda</option>
                     </select>
                 </div>
                 <div>
-                    <label  class="formulario-campos-label">Nome da mercadoria</label><br>
-                    <input class="input-mercadoria" type="text" placeholder="input">
+                    <label for="campo-mercadoria" class="formulario-campos-label">Nome da mercadoria</label><br>
+                    <input class="input-mercadoria" type="text" placeholder="input" id="campo-mercadoria" required>
                 </div>
                 <div>
-                    <label  class="formulario-campos-label">Valor</label><br>
-                    <input class="formulario-campos-input" type="text" placeholder="R$ 0,00">
+                    <label for="campo-valor" class="formulario-campos-label">Valor</label><br>
+                    <input 
+                    class="formulario-campos-input" 
+                    type="text" 
+                    placeholder="R$ 0,00" 
+                    id="campo-valor"
+                    onkeypress="testaCampoValor(event)"
+                    required>
                 </div>
             </div>
             <div class="formulario-botao">                
-                <button class="botao">Adicionar Transação</button>
+                <input
+                type="submit"
+                value="Adicionar Transação"
+                class="botao" 
+                id="botaoAdicionar"
+                >
             </div>                 
         </form>        
 
         <section class="area-tabela">
             <h2 class="area-tabela-titulo">Extrato de Transações</h2>
-            <table class="tabela" cellspacing="0">
-                <thead class="tabela-cabecalho">
-                    <tr>
-                        <th></th>
-                        <th>Mercadoria</th>
-                        <th>Valor</th>
-                    </tr>
-                </thead>
+            <table class="tabela" cellspacing="0">              
+                <tr class="tabela-cabecalho">
+                    <td id="transacao">Transação</td>
+                    <td id="mercadoria">Mercadoria</td>
+                    <td id="valor">Valor</td>
+                </tr>
 
+                <!-- <tfoot>
+                    <tr>
+                        <td>Total</td>
+                        <td></td>
+                        <td>0,00</td>
+                    </tr>
+                </tfoot> -->
+
+                <!--
                 <tbody>
                     <tr>
                         <td>+</td>
@@ -79,10 +99,13 @@
                         <td>Total</td>
                         <td>R$ 12.909,99<span class="tabela-lucro">[LUCRO]</span></td>
                     </tr>
-                </tfoot>
+                </tfoot> -->
+
+                
+
             </table>
         </section>
     </main>
-    
+    <script src="script.js"></script>
 </body>
 </html>
