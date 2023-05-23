@@ -16,13 +16,13 @@
             <nav class="cabecalho-menu">
                 <a class="cabecalho-menu-links-fechar" class="cabecalho-menu-links" href="javascript:void(0)">X</a>
                 <a class="cabecalho-menu-links" href="index.html">Cadastrar Transação</a><span class="linha-links">|</span>
-                <a class="cabecalho-menu-links" href="#" onclick="limparDados(merc)">Limpar dados</a>
+                <a class="cabecalho-menu-links" href="javascript:void(0)" onclick="limparDados(merc)">Limpar dados</a>
             </nav>
         </div>
     </header>
 
     <main class="main">        
-        <form class="formulario" onsubmit="testaFormulario(event);">
+        <form class="formulario" onsubmit="cadastrarTransacao(event);">
             <h2 class="formulario-titulo" >Nova transação</h2>
             <div class="formulario-campos">
                 <div>
@@ -66,15 +66,11 @@
                     <td id="valor">Valor</td>
                 </tr>
 
-                <!-- <tfoot>
-                    <tr>
-                        <td>Total</td>
-                        <td></td>
-                        <td>0,00</td>
-                    </tr>
-                </tfoot> -->
+                <!--<tfoot>
+                    
+                </tfoot>
 
-                <!--
+                
                 <tbody>
                     <tr>
                         <td>+</td>
