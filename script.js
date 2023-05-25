@@ -44,16 +44,11 @@ function desenhaTabela() {
             <td>${listaMercadoria[merc].tipoTransacao}</td>
             <td>${listaMercadoria[merc].nomeMercadoria}</td>
             <td>${listaMercadoria[merc].valor}</td>
-        </tr>`
-    }
-        document.querySelector('table.tabela tfoot').innerHTML +=
-        `
-        <tr>
-            <td>Total</td>
-            <td></td>
-            <td>Valor</td>
         </tr>
         `
+    }
+
+}
    
     /*document.querySelector('table.tabela tfoot').innerHTML += `
     <tr>
@@ -64,7 +59,7 @@ function desenhaTabela() {
         </td>
     </tr>`;*/
      
-}
+
 
 function cadastrarTransacao(e) {
     e.preventDefault()
@@ -91,8 +86,11 @@ function cadastrarTransacao(e) {
     }
 
     limparCamposInput()
+    desenhaTabela()
 
   }
+
+  
 
  //A ÚLTIMA TRANSAÇAO SÓ APARECE DEPOIS DE ATUALIZAR A PÁGINA ???????????????????????????????????????????????????????
 
