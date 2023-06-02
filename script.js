@@ -43,29 +43,31 @@ function desenhaTabela() {
     var total = 0
 
     for (merc in listaMercadoria) {
-        valorNum = parseFloat(listaMercadoria[merc].valor.replace('R$', '').replace('.', '').replace(',','.'))
-        total += listaMercadoria[merc].tipoTransacao == '-' ? -1 * valorNum : valorNum
+        valorNum = parseFloat(listaMercadoria[merc].valor.replace('R$', '').replace('.', '').replace(',','.'));
+        total += listaMercadoria[merc].tipoTransacao == '-' ? -1 * valorNum : valorNum;
 
         document.querySelector('table.tabela tbody').innerHTML +=
         `<tr class="conteudo-dinamico">
             <td>${listaMercadoria[merc].tipoTransacao}</td>
             <td>${listaMercadoria[merc].nomeMercadoria}</td>
-            <td>${listaMercadoria[merc].valor}</td>
+            <td class="td3">${listaMercadoria[merc].valor}</td>
         </tr>
         `
     }
 
     document.querySelector('table.tabela tfoot').innerHTML += `
     <tr>
+        
         <td>Total</td>
         <td></td>
-        <td style="text-align:right; display: block;" id="valor-total"><strong>${total.toLocaleString("pt-BR", {
+        <td class="tdValor" id="valor-total"><strong>${total.toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL",
             minimumFractionDigits: 2,
         })}</strong>
         <p>${total > 0 ? "[LUCRO]" : total < 0 ? "[PREJUÍZO]" : ""}</p>
         </td>
+        
     </tr>`
 
 }   
@@ -112,10 +114,15 @@ function limparDados(merc) {
     if (localStorage.length == 0) {
         document.querySelector("table.tabela tbody").innerHTML += `
             <tr>
-            <td colspan="3" style ="text-align: center; padding-bottom: 10px"}>
-                Nenhuma transação cadastrada.
-            </td>
+                <td colspan="3" style ="text-align: center; padding-bottom: 10px"}>
+                    Nenhuma transação cadastrada.
+                </td>
             <tr>`;
+        document.querySelector("table.tabela tbody").innerHTML += `
+            <tr>
+
+            <tr>`;
+        
     }
 }
 

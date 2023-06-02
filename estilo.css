@@ -35,18 +35,18 @@
     justify-content: end;
     align-items: center;
     height: 100%;
-    width: 100%;
+    width: 50%;
     margin: 22px;
 }
 
 .cabecalho-menu {
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    flex-direction: row;
     align-items: center;
     background-color: #FFFFFF;
-    width: 60%;
-    gap: 20px;
+    width: 100%;
+    gap: 10px;
     height: 40px;
 }
 
@@ -129,6 +129,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .area-tabela-titulo {
@@ -146,7 +147,8 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    width: 95%;
+    width: 100%;
+    padding-left: 20px;
 }
 
 .tabela-cabecalho {
@@ -154,9 +156,18 @@
 }
 
 .tabela th {
-    text-align: left;
+    text-align: center;
     font-size: 14px;
     font-weight: 700;
+}
+
+.td1 {
+    width: 5%;
+}
+
+.td3 {
+    display: block;
+    text-align: right;
 }
 
 .tabela tbody td, .tabela th {
@@ -169,15 +180,20 @@
     font-weight: 700;
 }
 
+.tdValor {
+    text-align: right;
+    display: block;
+}
+
 .tabela tfoot td {
     position: relative;
-    padding-top: 5px;
+    padding-top: 10px;
     font-weight: bold;
 }
 
 .tabela tfoot td::before {
     position:absolute;
-    width: 100%;
+    width: 250%;
     content: '';
     top: 3px;
     font-weight: bold;
@@ -199,6 +215,11 @@
         padding-right: 20px;
     }
 
+    .menu {
+        width: 4%;
+        height: 4%;
+    }
+
     .cabecalho-menu-imagem {
         display: flex;
         width: 18px;
@@ -207,11 +228,11 @@
 
     .cabecalho-menu {
         display: none;
+        justify-content: normal;
         position: fixed;
         top: 0px;
         right: 0px;
         flex-direction: column;
-        align-items: flex-end;
         background-color: #333;
         height: 100%;
         width: 85%;
@@ -221,20 +242,7 @@
     .menu:hover .cabecalho-menu {
         display: flex;
     }
-/*
-    .cabecalho-menu-imagem:hover {
-        display: flex;
-        position: fixed;
-        top: 0px;
-        right: 0px;
-        flex-direction: column;
-        align-items: flex-end;
-        background-color: #333;
-        height: 100%;
-        width: 85%;
-        z-index: 2;
-    }*/
-
+    
     .cabecalho-menu a {
         padding: 0 20px;
         height: 32px;
@@ -302,10 +310,12 @@
     
     .area-tabela {
         width: 100%;
+        overflow: hidden;
     }
 
     .tabela{
         width: 100%;
+        padding-left: 0;
     }
 }
 
