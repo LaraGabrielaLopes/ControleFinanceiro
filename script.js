@@ -53,7 +53,7 @@ function desenhaTabela() {
             <tr>`;
     } else if (listaMercadoria.length != 0) {
         for (merc in listaMercadoria) {
-            valorNum = parseFloat(listaMercadoria[merc].valor.replace('R$', '').replace('.', '').replace(',','.'));
+            valorNum = parseFloat(listaMercadoria[merc].valor.replace('R$', '').replace(/\./g, '').replace(',','.'));
             total += listaMercadoria[merc].tipoTransacao == '-' ? -1 * valorNum : valorNum;
     
             document.querySelector('table.tabela tbody').innerHTML +=
